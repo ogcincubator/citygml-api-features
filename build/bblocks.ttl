@@ -1,0 +1,94 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ogcincubator.github.io/ogc.bbr.template.myFeature> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "Custom Feature" ;
+    dct:abstract "This examples shows a simple customisation for OGC API Feature schemas"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/citygml-api-features/build/generateddocs/json-full/bbr/template/myFeature/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/citygml-api-features/build/generateddocs/markdown/bbr/template/myFeature/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/citygml-api-features/bblock/ogc.bbr.template.myFeature" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2025-07-22"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
+    skos:inScheme <https://ogcincubator.github.io/citygml-api-features/> ;
+    dcat:keyword "examples",
+        "feature" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.bbr.template.mySchema>,
+        <https://ogcincubator.github.io/ogc.geo.features.feature> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/citygml-api-features/build/annotated/bbr/template/myFeature/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/citygml-api-features/build/annotated/bbr/template/myFeature/schema.json>,
+        <https://ogcincubator.github.io/citygml-api-features/build/annotated/bbr/template/myFeature/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/citygml-api-features/_sources/mySchema/rules.shacl> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" .
+
+<https://example.com/sources/1> rdfs:label "Sample source document" .
+
+<https://ogcincubator.github.io/ogc.bbr.template.mySchema> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "My Schema" ;
+    dct:abstract "An example schema defining the set of properties of any type of object."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/citygml-api-features/build/generateddocs/json-full/bbr/template/mySchema/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/citygml-api-features/build/generateddocs/markdown/bbr/template/mySchema/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/citygml-api-features/bblock/ogc.bbr.template.mySchema" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-07-22"^^xsd:date ;
+    dct:source <https://example.com/sources/1> ;
+    skos:inScheme <https://ogcincubator.github.io/citygml-api-features/> ;
+    dcat:keyword "templates" ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/citygml-api-features/build/annotated/bbr/template/mySchema/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/citygml-api-features/build/annotated/bbr/template/mySchema/schema.json>,
+        <https://ogcincubator.github.io/citygml-api-features/build/annotated/bbr/template/mySchema/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/citygml-api-features/_sources/mySchema/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/citygml-api-features/_sources/mySchema/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://ogcincubator.github.io/citygml-api-features/> a skos:ConceptScheme,
+        dcat:Catalog ;
+    rdfs:label "Building Blocks - My OGC Building Blocks repository" ;
+    dct:abstract """This is an example text for the abstract. It should be short and to the point.
+A "Tell me more" link will appear if there is an additional description with a longer explanation.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:description """The description can be longer. Both **the abstract** *and the description* support Markdown,
+including [links](https://google.es).
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    skos:prefLabel "Building Blocks - My OGC Building Blocks repository" ;
+    bblocks:hasValidationReport <https://ogcincubator.github.io/citygml-api-features/build/tests/report.html> ;
+    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+
+[] a prov:Activity ;
+    prov:endedAtTime "2025-07-22T07:24:23.033825"^^xsd:dateTime ;
+    prov:startedAtTime "2025-07-22T07:24:22.968322"^^xsd:dateTime ;
+    prov:used [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:0d0c8e24c8f93470a571385bcafe028448629836" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/citygml-api-features/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+    prov:wasAssociatedWith [ a prov:Agent,
+                schema:SoftwareApplication ;
+            rdfs:label "OGC-NA tools" ;
+            dct:hasVersion "0.5.dev3+g1871e64" ;
+            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
+
